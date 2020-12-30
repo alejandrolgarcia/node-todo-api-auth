@@ -1,0 +1,24 @@
+{
+    "name": "api-node-sqlite",
+    "version": "1.0.0",
+    "description": "Api with Nodejs",
+    "main": "index.js",
+    "scripts": {
+        "start": "node src/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "Node",
+        "API",
+        "Github",
+        "Git",
+        "Express",
+        "SQLite"
+    ],
+    "author": "Alejandro Garcia",
+    "license": "ISC",
+    "dependencies": {
+        "consign": "^0.1.6",
+        "express": "^4.17.1"
+    }
+}
