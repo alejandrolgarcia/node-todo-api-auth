@@ -1,6 +1,10 @@
 
 module.exports = app => {
-    app.listen(app.get('port'), () => {
-        console.log(`NToDos API - Port ${ app.get('port') }`);
+
+    app.db.sequelize.sync({ force: true }).then( () => {
+        app.listen(app.get('port'), () => {
+            console.log(`NToDos API - Port ${ app.get('port') }`); 
+        });
     });
+
 }
