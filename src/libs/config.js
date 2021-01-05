@@ -1,3 +1,6 @@
+// Config
+// SEED
+// process.env.SEED = process.env.SEED || 'NTodo$-AP1';
 
 module.exports = {
     database: 'ntodo',
@@ -9,5 +12,7 @@ module.exports = {
         define: {
             underscored: true
         }
-    }
+    },
+    jwtSecret: 'NTodo$-AP1',
+    jwtSession: { session: false }
 };

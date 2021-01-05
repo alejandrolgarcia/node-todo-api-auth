@@ -7,6 +7,7 @@ const app = express();
 consign({ cwd: path.join(__dirname) })
     .include('libs/config.js')
     .then('db.js')
+    .then('auth.js')
     .then('libs/middlewares.js')
     .then('routes')
     .then('libs/boot.js')
