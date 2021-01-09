@@ -25,6 +25,7 @@ module.exports = app => {
                         });
                     } else {
                         res.sendStatus(401);
+                        console.log(error);
                     }
                 })
                 .catch( error => {

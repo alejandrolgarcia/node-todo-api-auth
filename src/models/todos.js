@@ -21,12 +21,20 @@ module.exports = (sequelize, DataType) => {
             allowNull: false,
             defaultValue: false
         }
-    }, {
-        classMethods: {
-            associate: (models) => {
-                Todos.belongsTo(models.Users);
-            }
-        }
-    });
+    }, {});
+
+    Todos.associate = (models) => {
+        Todos.belongsTo(models.Users, {
+            foreignKey: 'user_id'
+        });
+    }
+
+    // }, {
+    //     classMethods: {
+    //         associate: (models) => {
+    //             Todos.belongsTo(models.Users);
+    //         }
+    //     }
+    // });
     return Todos;
 };

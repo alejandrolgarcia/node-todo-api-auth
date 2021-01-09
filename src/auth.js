@@ -13,7 +13,8 @@ module.exports = app => {
     };
 
     const strategy = new Strategy(params, (payload, done) => {
-        Users.findById(payload.id)
+        // Users.findById(payload.id)
+            Users.findOne({ where: payload.id })
             .then( user => {
                 if (user) {
                     return done(null, {
